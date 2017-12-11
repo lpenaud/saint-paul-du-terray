@@ -1,3 +1,6 @@
+<?php
+	require('view.php');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -46,20 +49,9 @@
 	<noscreen/>
 
 		<right class="right">
-			<h2>Liste des séjours prévus </h2>
-			<fieldset>
 			<?php
-			$bdd = new PDO('mysql:host=localhost;dbname=bdstpaul;charset=utf8', 'root');
-			$sejours = $bdd->query('select * from sejour order by sejno');
-			foreach ($sejours as $sejour): ?>
-				<sejour>
-					<h2><p><?php echo $sejour['SEJINTITULE'] ?></p></h2>
-					<?php echo $sejour['SEJMONTANTMBI'].'€' ?><BR/>
-					<?php echo 'A partir du '.$sejour['SEJDTEDEB'] ?>
-					<?php echo $sejour['SEJDUREE'].' nuits' ?>
-				</sejour>
-			<?php endforeach ?>
-			</fieldset>
+				echo displaySejours();
+			?>
 		</right>
 </main>
 
