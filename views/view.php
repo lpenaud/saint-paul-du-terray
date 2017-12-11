@@ -1,6 +1,3 @@
-<?php
-	require('view.php');
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -45,13 +42,20 @@
 				<li>Réduction de 40% pour famille de 3 enfants ou plus</li>
 			</ul>
 		</left>
-
 	<noscreen/>
-
 		<right class="right">
+			<h2>Liste des séjours prévus </h2>
+			<fieldset>
 			<?php
-				echo displaySejours();
-			?>
+			foreach ($sejours as $sejour): ?>
+				<sejour>
+					<h2><p><?php echo $sejour['SEJINTITULE'] ?></p></h2>
+					<?php echo $sejour['SEJMONTANTMBI'].'€' ?><BR/>
+					<?php echo 'A partir du '.$sejour['SEJDTEDEB'] ?>
+					<?php echo $sejour['SEJDUREE'].' nuits' ?>
+				</sejour>
+			<?php endforeach ?>
+			</fieldset>
 		</right>
 </main>
 
