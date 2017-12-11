@@ -1,0 +1,13 @@
+{
+    "name": "16penaudl/saint-paul-du-terray",
+    "description": "TP BTS SIO2",
+    "require": {
+        "silex/silex": "1.3.x-dev"
+    },
+    "authors": [
+        {
+            "name": "lpenaud",
+            "email": "l.penaud@zaclys.net"
+        }
+    ]
+}
