@@ -10,5 +10,10 @@
             "name": "lpenaud",
             "email": "l.penaud@zaclys.net"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "stpaul\\": "src"
+        }
+    }
 }

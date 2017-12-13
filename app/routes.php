@@ -1,8 +1,7 @@
 <?php
 
 // Home page
-$app->get('/', function () {
-	global $app;
+$app->get('/', function () use ($app) {
     $sejours = $app['dao.sejour']->findAll();
 
     ob_start();             // start buffering HTML output

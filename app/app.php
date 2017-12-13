@@ -1,13 +1,15 @@
 <?php
 
-// // Register global error and exception handlers
-// ErrorHandler::register();
-// ExceptionHandler::register();
+use Symfony\Component\Debug\ErrorHandler;
+use Symfony\Component\Debug\ExceptionHandler;
+
+// Register global error and exception handlers
+ErrorHandler::register();
+ExceptionHandler::register();
 
 // Register service providers.
 $app->register(new Silex\Provider\DoctrineServiceProvider());
-
 // Register services.
-$app['dao.article'] = function ($app) {
-    return new src\stpaul\Domain\SejourDAO($app['db']);
+$app['dao.sejour'] = function ($app) {
+    return new stpaul\DAO\SejourDAO($app['db']);
 };
