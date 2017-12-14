@@ -6,6 +6,9 @@
         "doctrine/dbal": "v2.5.13",
         "twig/twig": "~1.28"
     },
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "2.*"
+    },
     "authors": [
         {
             "name": "lpenaud",
