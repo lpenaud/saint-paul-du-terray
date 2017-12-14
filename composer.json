@@ -3,7 +3,8 @@
     "description": "TP BTS SIO2",
     "require": {
         "silex/silex": "1.3.x-dev",
-        "doctrine/dbal": "v2.5.13"
+        "doctrine/dbal": "v2.5.13",
+        "twig/twig": "~1.28"
     },
     "authors": [
         {
